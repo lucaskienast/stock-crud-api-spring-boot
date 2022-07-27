@@ -10,11 +10,11 @@ pipeline {
                 sh "mvn clean compile"
             }
         }
-        /*stage('Test') {
+        stage('Test') {
             steps {
                 sh "mvn test"
             }
-        }*/
+        }
         stage('deploy') {
             steps {
                 sh "mvn package"
