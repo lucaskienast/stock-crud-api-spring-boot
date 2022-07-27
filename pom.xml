@@ -60,7 +60,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
-        <finalName>lucaskienast-stock-api</finalName>
+        <finalName>docker_jenkins_springboot</finalName>
     </build>
 
 </project>

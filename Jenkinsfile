@@ -24,7 +24,7 @@ pipeline {
             steps {
                 echo "Hello Stock API"
                 sh 'ls'
-                sh 'docker build -t  lucaskienast/lucaskienast-stock-api:${BUILD_NUMBER} .'
+                sh 'docker build -t  lucaskienast/docker_jenkins_springboot:${BUILD_NUMBER} .'
             }
         }
         stage('Docker Login'){
@@ -36,12 +36,12 @@ pipeline {
         }
         stage('Docker Push'){
             steps {
-                sh 'docker push lucaskienast/lucaskienast-stock-api:${BUILD_NUMBER}'
+                sh 'docker push lucaskienast/docker_jenkins_springboot:${BUILD_NUMBER}'
             }
         }
         stage('Docker deploy'){
             steps {
-                sh 'docker run -itd -p  8081:8080 lucaskienast/lucaskienast-stock-api:${BUILD_NUMBER}'
+                sh 'docker run -itd -p  8081:8080 lucaskienast/docker_jenkins_springboot:${BUILD_NUMBER}'
             }
         }
         stage('Archving') {

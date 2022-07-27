@@ -1,7 +1,7 @@
 FROM openjdk:8
 
-ADD target/lucaskienast-stock-api.jar lucaskienast-stock-api.jar
+ADD target/docker_jenkins_springboot.jar docker_jenkins_springboot.jar
 
 EXPOSE 8080
 
-ENTRYPOINT ["java","-jar","lucaskienast-stock-api.jar"]
+ENTRYPOINT ["java","-jar","docker_jenkins_springboot.jar"]
