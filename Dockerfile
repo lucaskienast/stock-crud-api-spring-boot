@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:17
 
 ADD target/docker_jenkins_springboot.jar docker_jenkins_springboot.jar
 
